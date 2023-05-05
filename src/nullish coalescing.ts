@@ -1,6 +1,6 @@
-//nullish consoling, tarnary operator
+//nullish coalescing, tarnary operator
 
-// nullish consoling opporator
+// nullish coalescing opporator
 // null | undefined
 const yourName = null;
 const y = yourName ?? 'nothing';
