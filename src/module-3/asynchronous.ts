@@ -15,12 +15,19 @@ const checkAsyncronous2 = async () => {
 }
 checkAsyncronous2()
 
-const getTodo = async () => {
+type user = {
+    userId: number,
+    id: number,
+    title: string,
+    completed: boolean
+  }
+const getTodo = async (): Promise<user> => {
     const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
     const data = await res.json()
     return data
 }
 const getTodoData = async (): Promise<void> => {
-    await getTodo()
+    const a = await getTodo()
+    console.log(a)
 }
 getTodoData()
