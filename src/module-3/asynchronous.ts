@@ -1,33 +1,18 @@
-// asynchoronous typescript
+// asynchronous
 
-function checkAsyncronous(): Promise<string> {
-    return new Promise<string>((resolve, rejected) => {
-        const data = 'hello sir';
-        if (data) {
-            resolve('yes')
-        } else {
-            rejected('no')
-        }
-    })
+function asynchronousFunction(): Promise<string>{
+        return new Promise<string>((resolve, rejected) =>{
+            const data = 'data is string';
+            if(data){
+                resolve('data is true')
+            }else{
+                rejected(false)
+            }
+        })
 }
-const checkAsyncronous2 = async () => {
-    return await checkAsyncronous()
-}
-checkAsyncronous2()
 
-type user = {
-    userId: number,
-    id: number,
-    title: string,
-    completed: boolean
-  }
-const getTodo = async (): Promise<user> => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-    const data = await res.json()
-    return data
+const d3 = async() => {
+    const a3 = await asynchronousFunction()
+    console.log(a3)
 }
-const getTodoData = async (): Promise<void> => {
-    const a = await getTodo()
-    console.log(a)
-}
-getTodoData()
+d3()

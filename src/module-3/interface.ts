@@ -1,4 +1,4 @@
-// interface, type alias, extends (in function, array, )
+// interface, type alias, type-&, interface-extends (in function, array, )
 
 // interface
 interface User {

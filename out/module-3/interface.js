@@ -1,5 +1,5 @@
 "use strict";
-// interface, type alias, extends (in function, array, )
+// interface, type alias, type-&, interface-extends (in function, array, )
 const user2 = {
     name: 's'
 };

@@ -1,10 +1,21 @@
-// generic keyof constraint
+// generic keyof constraints
 
-type Obj = { name: string; roll: number; class: string }
-type keyOfTypes = keyof Obj;
+type User2 = {
+    name: string;
+    roll: number;
+    class: string
+}
+type newType = "name" | "roll" | 'class'
+type keyofType = keyof User2
+const aa: newType = 'name'
+const bb: keyofType = 'name'
 
-type objType = {name: string, roll: number}
-// function getProperty<X, Y extends keyof X>(obj: objType, key: Y){
-//     obj[key]
-// }
-// const b = getProperty({name: 'h', roll: 20}, 'roll')
+
+type keyofObjectType ={
+    name: string; roll: number
+}
+function userPropertyFn<X,Y extends keyof X>(obj: X,key: Y): X[Y]{
+    return obj[key]
+}
+// const user8 = userPropertyFn<keyofObjectType, keyof keyofObjectType>({name: 'hridoy', roll: 20}, 'name')
+const user8 = userPropertyFn({name: 'hridoy', roll: 20}, 'name')
