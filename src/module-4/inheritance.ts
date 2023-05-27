@@ -26,5 +26,9 @@ class Boy extends Student{
         super(name, address, age)
         this.nickName = nickNameTT
     }
+    boySpeach(speach: string){
+        console.log(`My ${speach}`)
+    }
 }
 const fahim = new Boy('Fahim', 'haydarabad', 20, 'Fahim')
+const aaa = fahim.boySpeach('Taka')
