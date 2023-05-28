@@ -60,8 +60,6 @@ class Cat extends Animal2{
         console.log('I am a cat')
     }
 }
-// const animal3 = new Dog('German Shaper', 'dog')
-// const animal4 = new Dog('Persian', 'cat')
 
 function getAnimal(obj: Animal2){
     // obj.
@@ -79,3 +77,8 @@ function isGog(animal: Animal2):animal is Dog{
 function isCat(animal: Animal2):animal is Cat{
     return animal instanceof Cat
 }
+
+const animal3 = new Dog('German Shaper', 'dog')
+const animal4 = new Cat('Persian', 'cat')
+getAnimal(animal3)
+getAnimal(animal4)
