@@ -1,5 +1,5 @@
+"use strict";
 // abstraction => interface && abstract
-
 // interface
 // interface CarType{
 //     startCar: () => void
@@ -20,24 +20,21 @@
 //     }
 // }
 // const carClass = new CarClass()
-
 // abstract
-abstract class CarTypeClass2 {
-    abstract carStart(): void
-    abstract carStop: () => void
-    carName(){
-        console.log(' car name is XXXXX')
+class CarTypeClass2 {
+    carName() {
+        console.log(' car name is XXXXX');
     }
 }
-
 class CarNameClass {
-    carStart(){
-        console.log('car is starting')
+    constructor() {
+        this.carStop = () => {
+            console.log('car is stop now');
+        };
     }
-    carStop =() => {
-        console.log('car is stop now')
+    carStart() {
+        console.log('car is starting');
     }
 }
-
-const azz = new CarNameClass()
+const azz = new CarNameClass();
 // console.log(new CarTypeClass2().carName()) // Cannot create an instance of an abstract class
